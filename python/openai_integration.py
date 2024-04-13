@@ -26,7 +26,7 @@ def get_keywords_for_search(prompt: str):
         return None
 
 # Example usage
-user_prompt = "chill vibes with a hint of jazz"
-keywords = get_keywords_for_search(user_prompt)
-print(f"Keywords for Spotify search: {keywords}")
+# user_prompt = "chill vibes with a hint of jazz"
+# keywords = get_keywords_for_search(user_prompt)
+# print(f"Keywords for Spotify search: {keywords}")
 
