@@ -3,6 +3,7 @@
 }
 
 .header {
+  z-index: 100;
   display: flex;
   top: 0;
   width: 100%;
@@ -10,10 +11,10 @@
   padding: 16px;
   font-size: 20px;
   font-family: "Lucida Console", "Courier New", monospace;
-  color: var(--bright-blue);
-  background-color: var(--black);
+  color: var(--dark-blue);
+  background-color: var(--light-blue);
 }
 
-.headertext {
+.title {
   text-align: center; 
 }

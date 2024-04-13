@@ -8,7 +8,7 @@ export default function Home() {
         <header>
           <nav className={styles.header}>
             <div className={styles.headertext}>
-              <h1>Auralys</h1>
+              <h1 className={styles.title}>Auralys</h1>
             </div>
           </nav>
         </header>
