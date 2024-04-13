@@ -103,13 +103,18 @@
   line-height: 60px;
 }
 
+.spinner-container {
+  padding-top: 20px; /* Adjust this value as needed */
+  text-align: center; /* Center the spinner horizontally */
+}
+
 .spinner {
   position: relative;
   background-color: purple;
   width: 100px; /* changed this */
   height: 100px;
   border-radius: 50%;
-  margin: 24px;
+  margin: auto;
   background: conic-gradient(#0A1128, #001F54, #D9BBF9, #4f0147);
   animation: spin 1.4s linear infinite;
   box-shadow: 0px 0px 150px -75px black;
@@ -139,8 +144,10 @@
 
 .loadingAnimation {
   display: inline-block;
-  background-image: url('/resources/animal.png'); 
+  background-image: url('../resources/animal.png'); 
+  z-index: 50;
   background-repeat: no-repeat;
+  background-position: center;
   width: 50px; /* Width of your icon */
   height: 50px; /* Height of your icon */
   animation: bounce 2s infinite;

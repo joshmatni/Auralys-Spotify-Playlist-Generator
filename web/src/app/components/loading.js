@@ -2,8 +2,7 @@ import styles from "../styles/page.module.css";
 
 function Loading() {
     return (
-        <div className={styles.spinner}>
-        </div>
+            <div className={styles.spinner}> </div>
 
     );
 }

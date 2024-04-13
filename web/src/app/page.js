@@ -20,6 +20,7 @@ export default function Home() {
             <div className={styles.headertext}>
               <h1 className={styles.title}>Auralys</h1>
             </div>
+            <div className={styles.loadingAnimation}> </div>
 
             <ul className={styles.headermenu}>
 
@@ -79,8 +80,8 @@ export default function Home() {
                   {
                     setIsLoading(true);
                     /*call gpt method*/
-                    console.log('Navigating to /songs');
-                    navigate('../pages/songs');
+                    //console.log('Navigating to /songs');
+                    //navigate('../pages/songs');
                   }
                 
               }}
