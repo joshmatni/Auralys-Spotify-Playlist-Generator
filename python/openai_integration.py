@@ -24,7 +24,7 @@ def get_keywords_for_search(prompt: str):
         logging.error(f"Failed to extract keywords: {str(e)}")
         return None
 
-# user_prompt = "generate me a playlist that makes me happy for the day"
-# keywords = get_keywords_for_search(user_prompt)
-# print(f"Keywords for Spotify search: {keywords}")
+user_prompt = "generate me a playlist that makes me happy for the day"
+keywords = get_keywords_for_search(user_prompt)
+print(f"Keywords for Spotify search: {keywords}")
 
