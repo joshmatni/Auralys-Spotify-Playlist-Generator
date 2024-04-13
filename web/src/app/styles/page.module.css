@@ -101,6 +101,63 @@
   line-height: 60px;
 }
 
+.spinner {
+  position: relative;
+  background-color: purple;
+  width: 100px; /* changed this */
+  height: 100px;
+  border-radius: 50%;
+ /* background: conic-gradient(#f7c723, #eb0ea5, #3dffc9);*/
+  /*background: conic-gradient(#FF8FAB, #034078, #0A1128, #0A9396, #ebebeb); */
+  background: conic-gradient(#0A1128, #001F54, #D9BBF9, #4f0147);
+  animation: spin 1.4s linear infinite;
+  box-shadow: 0px 0px 150px -75px black;
+  border: 2px solid white;
+}
+
+.spinner::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0px 0px 110px -70px black;
+  border: 2px solid white;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+} 
+
+
+@keyframes typing{
+  from {width: 0;}
+  to {width: 100%}
+}
+
+
+.description{
+  margin-top: 20px auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #006D77;
+  text-shadow: 2px 2px 4px rgba(0,0,0.0.5);
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif; 
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 5s steps(40, end) forwards;
+  
+}
 
 
 
