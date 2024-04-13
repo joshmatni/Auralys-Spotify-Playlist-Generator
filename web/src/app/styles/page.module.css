@@ -3,6 +3,7 @@
   display: flex;
   top: 0;
   width: 100%;
+  height: 64px;
   margin-bottom: 16px;
   padding: 16px;
   font-family: "Lucida Console", "Courier New", monospace;
@@ -21,7 +22,6 @@
   transition: color 0.3s ease, text-shadow 0.3s ease;
   letter-spacing: 0.25em; /* Adds space between letters. Adjust value as needed. */
   font-family: "Comfortaa", sans-serif;
-  align-middle: center;
 }
 
 .title:hover {
@@ -34,7 +34,7 @@
   margin: 16px;
   border-radius: 24px;
   justify-content: center;
-  height:  156px;
+  height:  84px;
   display: flex;
   background-color: var(--grey);
   position: relative;
@@ -111,7 +111,7 @@
 .spinner {
   position: relative;
   background-color: purple;
-  width: 100px; /* changed this */
+  width: 100px; 
   height: 100px;
   border-radius: 50%;
   margin: auto;
@@ -137,14 +137,14 @@
 
 .loadingText {
   margin-top: 150px; 
-  font-size: 18px; 
+  font-size: 20px; 
   color: #333; 
   text-align: center;
 }
 
 .loadingAnimation {
   display: inline-block;
-  background-image: url('../resources/animal.png'); 
+  background-image: url('/animal.png'); 
   z-index: 50;
   background-repeat: no-repeat;
   background-position: center;
@@ -172,19 +172,25 @@
 } 
 
 .description {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 24px;
+  height: 164px;
   margin: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--grey);
 }
 
 .description p {
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace; 
   white-space: nowrap;
   overflow: hidden;
   max-width: 0;
-  animation: typing 3.1s steps(40, end) forwards;
+  animation: typing 2.1s steps(40, end) forwards;
   color: #006D77;
-  font-size: 1em;
+  font-size: 24px;
   margin: 0;
 }
 

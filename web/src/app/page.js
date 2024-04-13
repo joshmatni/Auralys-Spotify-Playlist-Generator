@@ -3,13 +3,35 @@ import { useState } from "react";
 import Loading from "./components/loading.js";
 import Image from "next/image";
 import styles from "./styles/page.module.css";
-// import { useHistory } from "react-router-dom";
+import { useRouter } from 'next/navigation';
+import { useEffect } from "react";
 
 
 export default function Home() {
+  const router = useRouter();
   const [Prompt, setPrompt] = useState("");
+  const [Response, setResponse] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isPromptEmpty, setIsPromptEmpty] = useState(true);
+
+  async function getGPT() {
+    const client = axios.create({
+      headers: { "Content-Type": "application/json" },
+    });
+    const params = {
+      prompt: Prompt,
+    };
+    client
+      .post("api/openai", JSON.stringify(params))
+      .then((result) => {
+        setResponse(result.data.text);
+        console.log({Response});
+        setisLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
   
   return (
       <div className={styles.background}>
@@ -20,20 +42,35 @@ export default function Home() {
             <div className={styles.headertext}>
               <h1 className={styles.title}>Auralys</h1>
             </div>
-            <div className={styles.loadingAnimation}> </div>
+
 
             <ul className={styles.headermenu}>
 
             <li>
-            <button className={styles.lgin} type="navbutton"> Log In </button>
+            <button className={styles.lgin} 
+                type="navbutton" 
+                onClick = {(e) => { 
+                  router.push('/login')
+                }}
+            > Log In </button>
               </li>
 
               <li>
-              <button className={styles.sgnup} type="navbutton"> Sign Up </button>
+              <button className={styles.sgnup} 
+                type="navbutton"
+                onClick = {(e) => { 
+                  router.push('/signup')
+                }}
+              > Sign Up </button>
               </li>
 
               <li>
-              <button className={styles.question} type="navbutton"> Contact Us </button>
+              <button className={styles.question} 
+                type="navbutton"
+                onClick = {(e) => { 
+                  router.push('/contact')
+                }}
+              > Contact Us </button>
               </li>
 
             </ul>
@@ -42,16 +79,19 @@ export default function Home() {
         </header>
 
         <div className={styles.description}>
-            <p>Welcome to Auralys, your handly helper for creating personalized playlists! </p>
+
+          <Image src={'/music.svg'}
+                width={200}
+                height={125}
+                alt="photo"></Image>
+            <p>Welcome to Auralys, your personalized playlist experience! </p>
         </div>
       
 
           <div className={styles.promptsection}>
 
             <div className={styles.chatbox}>
-            {isLoading ? (<div> <Loading/><div className={styles.loadingAnimation}>
-      {/* Here you can insert your animated graphic or icon */}
-    </div>
+            {isLoading ? (<div> <Loading/>
     <p className={styles.loadingText}>
       Tuning your personalized playlist...
     </p></div> ) : 
@@ -79,9 +119,8 @@ export default function Home() {
                   else
                   {
                     setIsLoading(true);
-                    /*call gpt method*/
-                    //console.log('Navigating to /songs');
-                    //navigate('../pages/songs');
+                    getGPT();
+                    router.push('/response');
                   }
                 
               }}
