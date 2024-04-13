@@ -1,9 +1,14 @@
 'use client';
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 import {generateResponse} from "./main";
 
 export default function Home() {
+
+  const [Prompt, setPrompt] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
   return (
       <div className={styles.background}>
         <header>
@@ -35,16 +40,41 @@ export default function Home() {
           <div className={styles.hero}>
 
             <div className={styles.chatbox}>
-                <p className={styles.chatboxtext}>
-                  Enter a prompt!
-                </p>
+                <div className={styles.chatboxtext}>
+                  {isLoading ? (<p> {Prompt} </p>) 
+                  : <p> Enter prompt: </p>}
+                </div>
 
                 <div className={styles.inputbox}>
 
-                <input className={styles.inputfield} type={styles.text} placeholder="Enter prompt"></input>
+                <input className={styles.inputfield} 
+                        type={styles.text} 
+                        placeholder="Enter prompt"
+                        value={Prompt}
+                        onChange={(e) => {
+                          setPrompt(e.target.value);
+                        }}
+                />
                 
-              <button type={styles.submit} className={styles.inputbutton} onClick={generateResponse}>
+              <button 
+                type={styles.submit} 
+                className={styles.submitbutton}
+                onClick = {(e) => {
+                  setIsLoading(true);
+               }}
+              >
                 Submit
+              </button>
+
+              <button 
+                type={styles.clear} 
+                className={styles.clearbutton}
+                onClick = {(e) => {
+                  setIsLoading(false);
+                  setPrompt("");
+               }}
+              >
+                Clear
               </button>
                 </div>
 

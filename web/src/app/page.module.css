@@ -39,7 +39,8 @@
   position: relative;
 }
 
-.chatbox p{
+.chatbox p {
+  margin: 16px;
   font-family: "Lucida Console", "Courier New", monospace;
 }
 
@@ -89,7 +90,7 @@
   line-height: 60px;
 }
 
-.inputbutton {
+.submitbutton .clearbutton {
   cursor: pointer;
   background-color: var(--grey);
   border-radius: 25px;
@@ -98,6 +99,10 @@
   right: 0;
   padding: 8px;
   margin: 28px;
+}
+
+.clearbutton {
+  
 }
 
 .inputbutton:hover {
