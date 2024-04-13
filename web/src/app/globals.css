@@ -1,15 +1,23 @@
 :root {
   --bright-blue: #56CBF9;
+  --grey: #ebebeb;
+  --dark-grey: #ebebeb:
   --dark-blue: #001F54;
+  --blue: #0A9396;
   --purple: #D9BBF9;
   --black: #0A1128;
   --darkish-blue: #034078;
+  --pretty: #006D77;
   --max-width: 1100px;
   --border-radius: 12px;
-  /*--font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;*/
+}
 
+
+p {
+  color: var(--darkish-blue);
+  text-indent: 30px;
+  font-size: 2rem;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 body {
@@ -24,13 +32,16 @@ body {
   overflow: hidden;
 }
 
-.background {
-  background-image: url('coloring.jpg'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh; /* This will make it full height of the viewport */
+input {
+  border-radius: 25px;
+  border: 2px;
+  background-color: var(--pretty);
+  padding: 20px; 
+  width: 700px;
+  height: 15px;    
+  justify-content: center;
 }
+
 
 
 
