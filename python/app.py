@@ -6,6 +6,7 @@ from spotipy.oauth2 import SpotifyOAuth
 from openai_integration import get_keywords_for_search
 import logging
 import requests
+from flask_cors import CORS
 
 load_dotenv()
 CLIENT_ID = os.getenv("CLIENT_ID")
@@ -14,6 +15,7 @@ REDIRECT_URI = "http://localhost:8888/callback/"
 SCOPE = "playlist-modify-private playlist-modify-public"
 
 app = Flask(__name__)
+CORS(app)
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID, client_secret=CLIENT_SECRET, redirect_uri=REDIRECT_URI, scope=SCOPE))
 logging.basicConfig(level=logging.INFO)
 

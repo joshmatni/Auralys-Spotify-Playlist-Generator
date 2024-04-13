@@ -13,6 +13,7 @@ def get_keywords_for_search(prompt: str):
             messages=[
                 {"role": "system", "content": "You are an assistant skilled in extracting keywords from the prompt for playlist generation and music."},
                 {"role": "user", "content": prompt}
+                # if the prompt doesnt have a minimum of 15 words generate some synonms then
             ],
             temperature=0.3,
             max_tokens=60
