@@ -130,29 +130,39 @@
   border: 2px solid white;
 }
 
+.loadingText {
+  margin-top: 150px; 
+  font-size: 18px; 
+  color: #333; 
+  text-align: center;
+}
+
+.loadingAnimation {
+  display: inline-block;
+  background-image: url('/resources/animal.png'); 
+  background-repeat: no-repeat;
+  width: 50px; /* Width of your icon */
+  height: 50px; /* Height of your icon */
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
 } 
-
-
-
-
-@keyframes buttonClick {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.95);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-
-
 
 .description {
   margin: 16px;

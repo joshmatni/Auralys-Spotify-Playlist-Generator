@@ -48,7 +48,12 @@ export default function Home() {
           <div className={styles.promptsection}>
 
             <div className={styles.chatbox}>
-            {isLoading ? (<div> <Loading/> </div>) : 
+            {isLoading ? (<div> <Loading/><div className={styles.loadingAnimation}>
+      {/* Here you can insert your animated graphic or icon */}
+    </div>
+    <p className={styles.loadingText}>
+      Tuning your personalized playlist...
+    </p></div> ) : 
             (
               
             <div className={styles.inputbox} >
