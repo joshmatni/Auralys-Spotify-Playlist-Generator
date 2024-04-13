@@ -33,6 +33,7 @@ body {
 }
 
 input {
+  outline-color: white;
   border-radius: 25px;
   border: 2px;
   background-color: var(--pretty);
@@ -41,6 +42,7 @@ input {
   height: 15px;    
   justify-content: center;
 }
+
 
 
 

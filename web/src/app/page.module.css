@@ -1,5 +1,6 @@
 
 .header {
+  margin-left: 24px;
   display: flex;
   top: 0;
   width: 100%;
@@ -29,11 +30,10 @@
 
 .chatbox {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 25px;
-  border-radius: 25px;
+  margin: 24px;
+  border-radius: 24px;
   justify-content: center;
   height: 500px;
-  width: 90%;
   display: flex;
   background-color: var(--grey);
   position: relative;
@@ -46,12 +46,36 @@
   width: 90%;
 }
 
-.lgin, .sgnup {
+.lgin, .sgnup, .question {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-left: 10px; 
   padding: 10px 20px; 
   border-radius: 25px; 
-  border: 2px solid black; 
-  background-color: var(--light-blue);
-  color: black; 
+  border: none;
+  background-color: var(--grey);
+  cursor: pointer;
   font-family: "Lucida Console", "Courier New", monospace; 
 }
+
+.lgin:hover, .sgnup:hover, .question:hover {
+  background-color: var(--pretty);
+}
+
+.headermenu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  list-style: none;
+  margin-right: 84px;
+}
+
+.headermenu li {
+  line-height: 72px;
+}
+
+
+
+
+
+
