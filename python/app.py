@@ -145,4 +145,7 @@ def generate_playlist():
         return handle_error("Failed to generate search keywords")
         
         Make sure to update the REDIRECT_URI, CLIENT_ID, CLIENT_SECRET, and SCOPE variables with your own Spotify API credentials.
-        """
+        
+          """
+
+#use the commented function if better than originals
