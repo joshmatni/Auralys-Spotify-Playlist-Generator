@@ -1,26 +1,26 @@
 
 .header {
-  margin-left: 24px;
   display: flex;
   top: 0;
   width: 100%;
   padding: 16px;
   font-family: "Lucida Console", "Courier New", monospace;
-  background-color: var(--light-blue);
+  background-color: white;
 }  
 
 .title {
-  display: flex; 
-  font-size: 20px;
+  padding: 16px;
+  vertical-align: middle;
   color: var(--pretty);
   text-align: center;
   margin: 0; 
-  font-size: 5rem;
+  font-size: 24px;
   font-weight: bold;
   text-shadow: 2px 2px 4px; 
   transition: color 0.3s ease, text-shadow 0.3s ease;
-  letter-spacing: 0.35em; /* Adds space between letters. Adjust value as needed. */
+  letter-spacing: 0.25em; /* Adds space between letters. Adjust value as needed. */
   font-family: "Comfortaa", sans-serif;
+  align-middle: center;
 }
 
 .title:hover {
@@ -33,25 +33,37 @@
   margin: 24px;
   border-radius: 24px;
   justify-content: center;
-  height: 500px;
+  height: 124px;
   display: flex;
   background-color: var(--grey);
   position: relative;
 }
 
+.chatbox p{
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.inputfield {
+    border: none;
+    outline-color: white;
+    border-radius: 25px;
+    background-color: white;
+    padding: 20px; 
+    width: 860px;
+    height: 15px;    
+    justify-content: center;
+}
+
 .inputbox {
   position: absolute;
   bottom: 0;
-  margin: 16px;
-  width: 90%;
+  padding: 16px;
 }
 
 .lgin, .sgnup, .question {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-left: 10px; 
   padding: 10px 20px; 
   border-radius: 25px; 
-  border: none;
   background-color: var(--grey);
   cursor: pointer;
   font-family: "Lucida Console", "Courier New", monospace; 
@@ -62,18 +74,35 @@
 }
 
 .headermenu {
+  position: absolute;
+  padding-right: 32px;
+  right: 0;
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   gap: 40px;
   list-style: none;
-  margin-right: 84px;
 }
 
 .headermenu li {
-  line-height: 72px;
+  line-height: 60px;
 }
 
+.inputbutton {
+  cursor: pointer;
+  background-color: var(--grey);
+  border-radius: 25px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 8px;
+  margin: 28px;
+}
+
+.inputbutton:hover {
+  background-color: var(--pretty);
+}
 
 
 

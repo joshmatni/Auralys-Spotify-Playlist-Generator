@@ -12,16 +12,12 @@
   --border-radius: 12px;
 }
 
-
-p {
-  color: var(--darkish-blue);
-  text-indent: 30px;
-  font-size: 2rem;
-  font-family: "Lucida Console", "Courier New", monospace;
+button {
+  border: none;
 }
 
 body {
-  background-image: url('coloring.jpg');
+  background-image: url('resources/coloring.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,16 +28,6 @@ body {
   overflow: hidden;
 }
 
-input {
-  outline-color: white;
-  border-radius: 25px;
-  border: 2px;
-  background-color: var(--pretty);
-  padding: 20px; 
-  width: 700px;
-  height: 15px;    
-  justify-content: center;
-}
 
 
 
