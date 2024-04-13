@@ -1,7 +1,7 @@
 'use client';
 import { useState } from "react";
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./styles/page.module.css";
 import {generateResponse} from "./main";
 
 export default function Home() {
@@ -57,17 +57,18 @@ export default function Home() {
                 />
                 
               <button 
-                type={styles.submit} 
+                type={styles.inputbutton} 
                 className={styles.submitbutton}
-                onClick = {(e) => {
-                  setIsLoading(true);
+                onClick = {(e) => { 
+                    setIsLoading(true);
+                  
                }}
               >
                 Submit
               </button>
 
               <button 
-                type={styles.clear} 
+                type={styles.inputbutton} 
                 className={styles.clearbutton}
                 onClick = {(e) => {
                   setIsLoading(false);

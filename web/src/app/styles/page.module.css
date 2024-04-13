@@ -61,6 +61,17 @@
   padding: 16px;
 }
 
+.chatbox button:hover {
+  background-color: var(--pretty);
+}
+
+.chatbox button {
+  background-color: white;
+  border-radius: 25px;
+  margin: 8px;
+}
+
+
 .lgin, .sgnup, .question {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 10px 20px; 
@@ -90,24 +101,7 @@
   line-height: 60px;
 }
 
-.submitbutton .clearbutton {
-  cursor: pointer;
-  background-color: var(--grey);
-  border-radius: 25px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 8px;
-  margin: 28px;
-}
 
-.clearbutton {
-  
-}
-
-.inputbutton:hover {
-  background-color: var(--pretty);
-}
 
 
 
