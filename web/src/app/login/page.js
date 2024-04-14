@@ -1,9 +1,14 @@
 import styles from "../styles/page.module.css";
+import "../globals.css";
+import ".././signup/signup.css"
 
 function Login() {
+
+    
+
     return (
         <div>
-  <header>
+        <header>
           <nav className={styles.header}>
             <div className={styles.container}>
 
@@ -30,7 +35,43 @@ function Login() {
             </div>
           </nav>
         </header>
-        </div>
+
+        <main className="mainContent">
+          <div className="signupCard">
+            <form className="signupForm">
+                <h2>Log In</h2>
+                <input 
+                    type="text" 
+                    id="Name" 
+                    name="Name" 
+                    required 
+                    placeholder="Name" 
+                    className="inputField"
+                />
+
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    required 
+                    minLength="2" 
+                    placeholder="Password" 
+                    className="inputField"
+                />
+
+            <button type="submit" className="submitBtn">Log In</button>
+
+            <p className={styles.loginLink}>
+                Don't have an account? <a href="/signup">Sign Up</a>
+            </p>
+            </form>
+          </div>
+        </main>
+
+       </div>
+
+       
+        
     );
 }
 

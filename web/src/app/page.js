@@ -1,4 +1,5 @@
 'use client';
+import axios from 'axios';
 import { useState } from "react";
 import Loading from "./components/loading.js";
 import Image from "next/image";
@@ -19,19 +20,21 @@ export default function Home() {
       headers: { "Content-Type": "application/json" },
     });
     const params = {
-      prompt: Prompt,
+      Prompt: {Prompt},
     };
     client
       .post("api/openai", JSON.stringify(params))
       .then((result) => {
         setResponse(result.data.text);
         console.log({Response});
-        setisLoading(false);
+        setIsLoading(false);
       })
       .catch((error) => {
         console.log(error);
       });
   }
+
+
   
   return (
       <div className={styles.background}>
@@ -118,9 +121,10 @@ export default function Home() {
                   }
                   else
                   {
+                    console.log({Prompt});
                     setIsLoading(true);
                     getGPT();
-                    router.push('/response');
+                    /*router.push('/response');*/
                   }
                 
               }}
@@ -131,6 +135,7 @@ export default function Home() {
               type={styles.inputbutton} 
               className={styles.clearbutton}
               onClick = {(e) => {
+                setResponse("");
                 setIsLoading(false);
                 setPrompt("");
                 setIsPromptEmpty(true);

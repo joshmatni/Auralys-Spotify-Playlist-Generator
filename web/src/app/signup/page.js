@@ -1,12 +1,10 @@
 import styles from "../styles/page.module.css";
+import "../globals.css";
+import "./signup.css";
 
 function Signup() {
 
     
-    const handleSubmit = (event) => {
-        event.preventDefault(); // Prevents the default form submit action
-        console.log('Form submission placeholder');
-    };
 
     return (
         <div>
@@ -38,25 +36,17 @@ function Signup() {
           </nav>
         </header>
 
-        <main className={styles.mainContent}>
-            <form className={styles.signupForm} onSubmit={handleSubmit}>
+        <main className="mainContent">
+          <div className="signupCard">
+            <form className="signupForm">
                 <h2>Sign Up</h2>
                 <input 
                     type="text" 
-                    id="fullName" 
-                    name="fullName" 
+                    id="Name" 
+                    name="Name" 
                     required 
-                    placeholder="Full Name" 
-                    className={styles.inputField}
-                />
-
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    required 
-                    placeholder="Email" 
-                    className={styles.inputField}
+                    placeholder="Name" 
+                    className="inputField"
                 />
 
                 <input 
@@ -66,15 +56,16 @@ function Signup() {
                     required 
                     minLength="2" 
                     placeholder="Password" 
-                    className={styles.inputField}
+                    className="inputField"
                 />
 
-            <button type="submit" className={styles.submitBtn}>Create Account</button>
+            <button type="submit" className="submitBtn">Create Account</button>
 
             <p className={styles.loginLink}>
                 Already have an account? <a href="/login">Log in</a>
             </p>
             </form>
+          </div>
         </main>
 
        </div>

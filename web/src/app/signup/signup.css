@@ -1,0 +1,60 @@
+
+.signupCard {
+  background: #e6ebea;
+  padding: 30px; 
+  border-radius: 15px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: auto;
+  max-width: 350px;
+  margin: 0 auto;
+  margin-top: 9vh;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.inputField {
+  padding: 15px 10px; 
+  border: 1px solid #ddd;
+  border-radius: 8px; 
+  font-size: 16px; 
+}
+
+.submitBtn {
+  padding: 15px 10px;
+  background-color: #006D77;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px; 
+  transition: background-color 0.3s; 
+}
+
+.submitBtn:hover {
+  background-color: #005f69;
+}
+
+.loginLink {
+  text-align: center;
+  margin-top: 30px; 
+}
+
+.loginLink a {
+  color: #006D77;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.loginLink a:hover {
+  text-decoration: underline;
+}
+
+h2{
+  font-size: 25px;
+}
+

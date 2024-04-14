@@ -205,4 +205,81 @@
   }
 }
 
+.inputWrapper {
+  border-radius: 12px;
+  padding: 35px;
+  background: #f9fafb;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 40px auto;
+}
 
+.inputLabel {
+  /*color: #6B7280; */
+  color: #9CA3AF;
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Input field styling */
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm textarea {
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 14px;
+  background-color: #fff;
+  margin-bottom: 16px; /* Increase the margin for better spacing */
+  width: calc(100% - 32px); /* Adjust width to account for padding */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s;
+}
+
+/* Button styling */
+.contactForm button[type="submit"] {
+  background-color: var(--pink);
+  color: #FFFFFF;
+  padding: 12px 20px; /* Adjust padding to your preference */
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block; /* Keep it block for full width */
+  margin: 20px auto; /* Auto margins for horizontal centering */
+  width: auto; /* Auto width to fit the content */
+  max-width: 200px; 
+} 
+
+/* Hover and focus states for inputs and button */
+.contactForm input[type="text"]:hover,
+.contactForm input[type="email"]:hover,
+.contactForm textarea:hover,
+.contactForm input[type="text"]:focus,
+.contactForm input[type="email"]:focus,
+.contactForm textarea:focus {
+  border-color: #93C5FD;
+}
+
+.contactForm button[type="submit"]:hover {
+  background-color: #3730A3;
+}
+
+@media (max-width: 600px) {
+  .inputWrapper {
+    padding: 20px;
+  }
+
+  .contactForm input[type="text"],
+  .contactForm input[type="email"],
+  .contactForm textarea,
+  .contactForm button[type="submit"] {
+    width: calc(100% - 40px); 
+  }
+}
+
+.contactTitle {
+  font-family: "Lucida Console", "Courier New", monospace; 
+}
