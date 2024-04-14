@@ -15,27 +15,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [isPromptEmpty, setIsPromptEmpty] = useState(true);
 
-  async function getGPT() {
-    const client = axios.create({
-      headers: { "Content-Type": "application/json" },
-    });
-    const params = {
-      Prompt: {Prompt},
-    };
-    client
-      .post("api/openai", JSON.stringify(params))
-      .then((result) => {
-        setResponse(result.data.text);
-        console.log({Response});
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-
-
-  
+ 
   return (
       <div className={styles.background}>
         <header>
@@ -123,7 +103,6 @@ export default function Home() {
                   {
                     console.log({Prompt});
                     setIsLoading(true);
-                    getGPT();
                     /*router.push('/response');*/
                   }
                 
