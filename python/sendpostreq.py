@@ -1,7 +1,7 @@
 import requests
 
 # URL of your Flask application
-url = 'http://localhost:5000/create_playlist'
+url = 'http://127.0.0.1:5000//create_playlist'
 
 # Example user prompt
 user_prompt = "I want a playlist with the latest hip hop hits"

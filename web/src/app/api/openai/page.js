@@ -2,7 +2,6 @@ import { OpenAI } from "openai";
 
 const openaiApiKey = process.env.OPENAI_API_KEY;
 
-// Pass the API key to the OpenAI client
 const openai = new OpenAI({
   apiKey: openaiApiKey
 });
