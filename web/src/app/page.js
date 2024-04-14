@@ -8,6 +8,26 @@ import { useRouter } from 'next/navigation';
 import { useEffect } from "react";
 
 
+async function getGPT() {
+  const client = axios.create({
+      headers: { "Content-Type": "application/json" },
+  });
+  const params = {
+      prompt: Prompt,
+  };
+  try {
+    const response = await axios.post("http://localhost:5000/create_playlist", {
+    prompt: Prompt,
+});
+      setResponse(response.data.text);
+      console.log({ Response });
+      console.log(result.response.data)
+      setIsLoading(false);
+  } catch (error) {
+      console.error(error.response.data);
+  }
+}
+
 export default function Home() {
   const router = useRouter();
   const [Prompt, setPrompt] = useState("");
@@ -30,7 +50,7 @@ export default function Home() {
         setIsLoading(false);
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.response.data);
       });
   }
 
@@ -46,6 +66,7 @@ export default function Home() {
               <h1 className={styles.title}>Auralys</h1>
             </div>
 
+            <button onClick={getGPT}>Test Connection</button>
 
             <ul className={styles.headermenu}>
 

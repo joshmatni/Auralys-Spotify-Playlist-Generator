@@ -15,7 +15,7 @@ REDIRECT_URI = "http://localhost:8888/callback/"
 SCOPE = "playlist-modify-private playlist-modify-public"
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=['http://localhost:3000'])
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID, client_secret=CLIENT_SECRET, redirect_uri=REDIRECT_URI, scope=SCOPE))
 logging.basicConfig(level=logging.INFO)
 

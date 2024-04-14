@@ -1,0 +1,6 @@
+{
+  "/page": "app/page.js",
+  "/login/page": "app/login/page.js",
+  "/api/openai/page": "app/api/openai/page.js",
+  "/contact/page": "app/contact/page.js"
+}

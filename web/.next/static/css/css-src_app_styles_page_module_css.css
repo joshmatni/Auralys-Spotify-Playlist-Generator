@@ -1,0 +1,289 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/styles/page.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+
+.page_header__a4Msr {
+  display: flex;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  margin-bottom: 16px;
+  padding: 16px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  background-color: white;
+}  
+
+.page_title__YTQFW {
+  padding: 16px;
+  vertical-align: middle;
+  color: var(--pretty);
+  text-align: center;
+  margin: 0; 
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px; 
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  letter-spacing: 0.25em; /* Adds space between letters. Adjust value as needed. */
+  font-family: "Comfortaa", sans-serif;
+}
+
+.page_title__YTQFW:hover {
+  color: var(--blue); 
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.page_chatbox__MgfTU {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 16px;
+  border-radius: 24px;
+  justify-content: center;
+  height:  84px;
+  display: flex;
+  background-color: var(--grey);
+  position: relative;
+}
+
+.page_chatbox__MgfTU p {
+  margin: 16px;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.page_inputfield__WqZqU {
+    border: none;
+    outline-color: white;
+    border-radius: 25px;
+    background-color: white;
+    padding: 20px; 
+    width: 860px;
+    height: 15px;    
+    justify-content: center;
+}
+
+.page_inputbox__GWB9s {
+  position: absolute;
+  bottom: 0;
+  padding: 16px;
+}
+
+
+.page_chatbox__MgfTU button:hover {
+  background-color: var(--pretty);
+}
+
+.page_chatbox__MgfTU button {
+  background-color: white;
+  border-radius: 25px;
+  margin: 8px;
+}
+
+
+.page_lgin__5jbv4, .page_sgnup__aEdq9, .page_question__ROktv {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px 20px; 
+  border-radius: 25px; 
+  background-color: var(--grey);
+  cursor: pointer;
+  font-family: "Lucida Console", "Courier New", monospace; 
+}
+
+.page_lgin__5jbv4:hover, .page_sgnup__aEdq9:hover, .page_question__ROktv:hover {
+  background-color: var(--pretty);
+}
+
+.page_headermenu__2Fuab {
+  position: absolute;
+  padding-right: 32px;
+  right: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  list-style: none;
+}
+
+.page_headermenu__2Fuab li {
+  line-height: 60px;
+}
+
+.page_spinner-container__UtCdH {
+  padding-top: 20px; /* Adjust this value as needed */
+  text-align: center; /* Center the spinner horizontally */
+}
+
+.page_spinner__qiSF1 {
+  position: relative;
+  background-color: purple;
+  width: 100px; 
+  height: 100px;
+  border-radius: 50%;
+  margin: auto;
+  background: conic-gradient(#0A1128, #001F54, #D9BBF9, #4f0147);
+  animation: page_spin__1svMi 1.4s linear infinite;
+  box-shadow: 0px 0px 150px -75px black;
+  border: 2px solid white;
+}
+
+.page_spinner__qiSF1::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0px 0px 110px -70px black;
+  border: 2px solid white;
+}
+
+.page_loadingText__l9kW9 {
+  margin-top: 150px; 
+  font-size: 20px; 
+  color: #333; 
+  text-align: center;
+}
+
+.page_loadingAnimation__Srlb_ {
+  display: inline-block;
+  background-image: url('/animal.png'); 
+  z-index: 50;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px; /* Width of your icon */
+  height: 50px; /* Height of your icon */
+  animation: page_bounce__COQoy 2s infinite;
+}
+
+@keyframes page_bounce__COQoy {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes page_spin__1svMi {
+  to {
+    transform: rotate(360deg);
+  }
+} 
+
+.page_description__j95HZ {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 24px;
+  height: 164px;
+  margin: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey);
+}
+
+.page_description__j95HZ p {
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace; 
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 0;
+  animation: page_typing__rrF27 2.1s steps(40, end) forwards;
+  color: #006D77;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Typing keyframes */
+@keyframes page_typing__rrF27 {
+  from { 
+    max-width: 0;
+  }
+  to { 
+    max-width: 100%;
+    border-right: none; 
+  }
+}
+
+.page_inputWrapper__d41Nt {
+  border-radius: 12px;
+  padding: 35px;
+  background: #f9fafb;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.page_inputLabel__fgjeM {
+  /*color: #6B7280; */
+  color: #9CA3AF;
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Input field styling */
+.page_contactForm__r8kIC input[type="text"],
+.page_contactForm__r8kIC input[type="email"],
+.page_contactForm__r8kIC textarea {
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 14px;
+  background-color: #fff;
+  margin-bottom: 16px; /* Increase the margin for better spacing */
+  width: calc(100% - 32px); /* Adjust width to account for padding */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s;
+}
+
+/* Button styling */
+.page_contactForm__r8kIC button[type="submit"] {
+  background-color: var(--pink);
+  color: #FFFFFF;
+  padding: 12px 20px; /* Adjust padding to your preference */
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block; /* Keep it block for full width */
+  margin: 20px auto; /* Auto margins for horizontal centering */
+  width: auto; /* Auto width to fit the content */
+  max-width: 200px; 
+} 
+
+/* Hover and focus states for inputs and button */
+.page_contactForm__r8kIC input[type="text"]:hover,
+.page_contactForm__r8kIC input[type="email"]:hover,
+.page_contactForm__r8kIC textarea:hover,
+.page_contactForm__r8kIC input[type="text"]:focus,
+.page_contactForm__r8kIC input[type="email"]:focus,
+.page_contactForm__r8kIC textarea:focus {
+  border-color: #93C5FD;
+}
+
+.page_contactForm__r8kIC button[type="submit"]:hover {
+  background-color: #3730A3;
+}
+
+@media (max-width: 600px) {
+  .page_inputWrapper__d41Nt {
+    padding: 20px;
+  }
+
+  .page_contactForm__r8kIC input[type="text"],
+  .page_contactForm__r8kIC input[type="email"],
+  .page_contactForm__r8kIC textarea,
+  .page_contactForm__r8kIC button[type="submit"] {
+    width: calc(100% - 40px); 
+  }
+}
+
+.page_contactTitle__tg37o {
+  font-family: "Lucida Console", "Courier New", monospace; 
+}
+
