@@ -1,8 +1,11 @@
 import { OpenAI } from "openai";
 
-const openai = new OpenAI();
+const openaiApiKey = process.env.OPENAI_API_KEY;
 
-//Create a new instance of OpenAIApi with your API key
+// Pass the API key to the OpenAI client
+const openai = new OpenAI({
+  apiKey: openaiApiKey
+});
 
 export default async (req, res) => {
   if (1 == 1) {

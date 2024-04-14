@@ -8,9 +8,11 @@ import logging
 import requests
 from flask_cors import CORS
 
+
 load_dotenv()
-CLIENT_ID = os.getenv("CLIENT_ID")
-CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+OPENAI_API_KEY="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"
+CLIENT_ID="2cbb257b9e524eb18192f6ed664b0389"
+CLIENT_SECRET="4082dbe7a2414177b91cd96f51845307"
 REDIRECT_URI = "http://localhost:8888/callback/"
 SCOPE = "playlist-modify-private playlist-modify-public"
 
