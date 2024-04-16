@@ -7,75 +7,81 @@ import styles from "./styles/page.module.css";
 import { useRouter } from 'next/navigation';
 import { useEffect } from "react";
 
-async function getGPT() {
-  try {
-      setIsLoading(true);
-      const response = await axios.post("http://localhost:5000/create_playlist", {
-          prompt: Prompt,
-      });
 
-      if (response && response.data) {
-        if (error.response) {
-          console.error("API error response:", error.response.data);
-        } else {
-            console.error("Unexpected error:", error.message);
-        }
-      
-          console.log(response.data.text)
-          setResponse(response.data.text);
-          console.log("Response data:", response.data);
-      } else {
-          console.log("No response data found");
-      }
-  } catch (error) {
-      if (error.response) {
-          console.error("API error response:", error.response.data);
-      } else {
-          console.error("Unexpected error:", error.message);
-      }
-  } finally {
-      setIsLoading(false);
-  }
-}
-
-const fetchPythonResult = async () => {
-  try {
-    const response = await axios.get('/api/pythonExec');
-    if (response.data.result) {
-      console.log('Python script output:', response.data.result);
-    }
-  } catch (error) {
-    console.error('Error fetching Python script output:', error);
-  }
-};
-
+// async function getGPT() {
+//   const client = axios.create({
+//       headers: { "Content-Type": "application/json" },
+//   });
+//   const params = {
+//       prompt: Prompt,
+//   };
+//   try {
+//     const response = await axios.post("http://localhost:5001/generate_playlist", {
+//     prompt: Prompt,
+// });
+//       setResponse(response.data.text);
+//       console.log({ Response });
+//       console.log(result.response.data)
+//       setIsLoading(false);
+//   } catch (error) {
+//       console.error(error.response.data);
+//   }
+// }
 
 export default function Home() {
   const router = useRouter();
   const [Prompt, setPrompt] = useState("");
+  const [PromptComplete, setPromptComplete] = useState(false);
   const [Response, setResponse] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isPromptEmpty, setIsPromptEmpty] = useState(true);
 
+  // async function getGPT() {
+  //   const client = axios.create({
+  //     headers: { "Content-Type": "application/json" },
+  //   });
+  //   const params = {
+  //     Prompt: {Prompt},
+  //   };
+  //   client
+  //     .post("api/openai", JSON.stringify(params))
+  //     .then((result) => {
+  //       setResponse(result.data.text);
+  //       console.log({Response});
+  //       setIsLoading(false);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error.response.data);
+  //     });
+  // }
   async function getGPT() {
-    const client = axios.create({
-      headers: { "Content-Type": "application/json" },
-    });
-    const params = {
-      Prompt: {Prompt},
-    };
-    client
-      .post("api/openai", JSON.stringify(params))
-      .then((result) => {
-        setResponse(result.data.text);
-        console.log("Received response data text:", result.data.text);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.log(error.response.data);
-      });
-
+    // Convert prompt to string explicitly to ensure it's not undefined or another type
+    const promptString = String(Prompt).trim();
+  
+    if (promptString === "") {
+      console.error("Prompt is empty");
+      setIsPromptEmpty(true);
+      return;
     }
+    setIsLoading(true);
+    setIsPromptEmpty(false);
+    // CHANGED prompt -> Prompt
+    axios.post("http://localhost:5001/generate_playlist_route", { prompt: promptString }, {
+      headers: { "Content-Type": "application/json" },
+    })
+    .then((result) => {
+      setResponse(result.data.playlist_id);
+      console.log("Playlist ID received:", result.data.playlist_id);
+      setPromptComplete(true);
+    })
+    .catch((error) => {
+      console.error("Error:", error.response ? error.response.data : "Unknown Error");
+    })
+    .finally(() => {
+      setIsLoading(false);
+    });
+  }
+
   
   return (
       <div className={styles.background}>
@@ -86,6 +92,8 @@ export default function Home() {
             <div className={styles.headertext}>
               <h1 className={styles.title}>Auralys</h1>
             </div>
+
+            
 
             <ul className={styles.headermenu}>
 
@@ -127,7 +135,7 @@ export default function Home() {
                 width={200}
                 height={125}
                 alt="photo"></Image>
-            <p>Welcome to Auralys, your personalized playlist experience! </p>
+            <p>Welcome to Auralys, your personalized playlist experience!</p>
         </div>
       
 
