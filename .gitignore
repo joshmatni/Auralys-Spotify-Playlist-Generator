@@ -1,0 +1,9 @@
+# Next.js build output
+.next/
+out/
+
+# Potential large directories
+node_modules/
+web/node_modules/next/next-swc-fallback/@next/swc-darwin-arm64/next-swc.darwin-arm64.node
+# OS generated files
+.DS_Store
