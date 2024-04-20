@@ -116,7 +116,7 @@ def create_playlist(user_id, name, tracks):
         return None
     playlist = sp.user_playlist_create(user=user_id, name=name, public=True)
     sp.user_playlist_add_tracks(user_id, playlist_id=playlist['id'],tracks=tracks)
-    print("Tracks added to playlist:", tracks)
+    #print("Tracks added to playlist:", tracks)
     return playlist['id']
 
 def get_keywords_for_search(prompt: str, client: OpenAI):
@@ -147,4 +147,4 @@ def generate_playlist_name(keywords):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5001)
+    app.run(debug=True) # , host='0.0.0.0', port=5001
