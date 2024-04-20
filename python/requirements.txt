@@ -1,0 +1,6 @@
+openai
+python-dotenv
+Flask
+spotipy
+requests
+Flask-CORS
