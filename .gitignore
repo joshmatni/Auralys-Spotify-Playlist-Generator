@@ -1,9 +1,14 @@
 # Next.js build output
 .next/
 out/
-
+python/__pycache__
+python/.pytest_cache
+python/source
+python/venv/include/python3.12
+python/.env
 # Potential large directories
 node_modules/
 web/node_modules/next/next-swc-fallback/@next/swc-darwin-arm64/next-swc.darwin-arm64.node
+web/src/app/.env
 # OS generated files
 .DS_Store

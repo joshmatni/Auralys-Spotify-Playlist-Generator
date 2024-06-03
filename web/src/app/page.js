@@ -65,7 +65,7 @@ export default function Home() {
     }
     setIsLoading(true);
     setIsPromptEmpty(false);
-    // CHANGED prompt -> Prompt
+    //  5001
     axios.post("http://localhost:5001/generate_playlist_route", { prompt: promptString }, {
       headers: { "Content-Type": "application/json" },
     })
