@@ -33,7 +33,7 @@ Auralys is an innovative web application that uses the OpenAI API and Spotify AP
 <img src="img/generating.png" alt="Generating Playlist" width="500"/>
 
 #### Final Playlist Result
-<img src="img/spotify_login.png" alt="Playlist Result" width="500"/>
+<img src="img/result_playlist.png" alt="Playlist Result" width="500"/>
 
 ### Getting Started
 Due to the Spotify API permissions, we can only register up to 25 users. If you want to use Auralys, please message us!
