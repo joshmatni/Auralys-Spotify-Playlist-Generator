@@ -1,5 +1,5 @@
 # Auralys - AI Spotify Playlist Generator Web App
-
+- This project is soon to be deployed!
 ## Developed by: Joshua Matni, Ploy Wandeevong, Reni Wu, Kiana Partovi, and Matt Stanley
 
 ### Won First Place in the App Development Category for UNR's 38-hour Biggest Little Hackathon!
@@ -16,7 +16,7 @@ Auralys is an innovative web application that uses the OpenAI API and Spotify AP
 2. **Input Preferences**: Users enter their desired mood, genre, or other musical preferences.
 3. **Playlist Generation**: Auralys uses AI to generate a playlist that matches the user's preferences.
 
-### Screenshots
+## Example Pics!
 
 #### Spotify Login
 <img src="img/spotify_login.png" alt="Spotify Login" width="500"/>
