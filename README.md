@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Auralys - AI Spotify Playlist Generator Web App
 
-## Getting Started
+## Developed by: Joshua Matni, Ploy Wandeevong, Reni Wu, Kiana Partovi, and Matt Stanley
 
-First, run the development server:
+### Won First Place in the App Development Category for UNR's 38-hour Biggest Little Hackathon!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Auralys is an innovative web application that uses the OpenAI API and Spotify API to generate personalized Spotify playlists based on user input. The application is built with Next.js and React, providing a responsive and intuitive user interface. By leveraging these technologies, Auralys tunes into your musical tastes to create playlists that not only match your mood but also enhance your listening experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Technologies Used
+- **OpenAI API**: Powers the AI-driven playlist generation.
+- **Spotify API and Spotipy**: Manage music data and user playlist interactions.
+- **Next.js and React**: Frameworks used for building a scalable and efficient front-end.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Key Features
+- **Personalized Playlists**: Generates playlists based on a variety of user inputs and preferences.
+- **Integration with Spotify**: Seamlessly connects with Spotify to fetch songs and manage playlists.
+- **User-Friendly Interface**: Provides a simple and intuitive interface for an enhanced user experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### How It Works
+1. **User Login**: Users log in with their Spotify account.
+2. **Input Preferences**: Users enter their desired mood, genre, or other musical preferences.
+3. **Playlist Generation**: Auralys uses AI to generate a playlist that matches the user's preferences.
 
-## Learn More
+### Screenshots
 
-To learn more about Next.js, take a look at the following resources:
+#### Spotify Login
+<img src="img/spotify_login.png" alt="Spotify Login" width="500"/>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Auralys Home
+<img src="img/auralys_frontEnd.png" alt="Auralys Home" width="500"/>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Generating Playlist
+<img src="img/generating.png" alt="Generating Playlist" width="500"/>
 
-## Deploy on Vercel
+#### Final Playlist Result
+<img src="img/spotify_login.png" alt="Playlist Result" width="500"/>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Getting Started
+Due to the Spotify API permissions, we can only register up to 25 users. If you want to use Auralys, please message us!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Contributions
+This project is the collaborative effort of a dedicated team of developers who are passionate about music and technology. Contributions to the project are welcome. Please feel free to fork the repository, make changes, and submit a pull request.
+
+### License
+Auralys is released under the MIT License. See the LICENSE file in the repository for more information.
+
