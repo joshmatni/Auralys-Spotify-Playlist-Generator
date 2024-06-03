@@ -6,11 +6,6 @@
 
 Auralys is an innovative web application that uses the OpenAI API and Spotify API to generate personalized Spotify playlists based on user input. The application is built with Next.js and React, providing a responsive and intuitive user interface. By leveraging these technologies, Auralys tunes into your musical tastes to create playlists that not only match your mood but also enhance your listening experience.
 
-### Technologies Used
-- **OpenAI API**: Powers the AI-driven playlist generation.
-- **Spotify API and Spotipy**: Manage music data and user playlist interactions.
-- **Next.js and React**: Frameworks used for building a scalable and efficient front-end.
-
 ### Key Features
 - **Personalized Playlists**: Generates playlists based on a variety of user inputs and preferences.
 - **Integration with Spotify**: Seamlessly connects with Spotify to fetch songs and manage playlists.
